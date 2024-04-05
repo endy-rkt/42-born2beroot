@@ -1,0 +1,8 @@
+trazanad42
+mdp intra
+
+new user:trazanad
+passwd:trazanad007#
+
+encryption passphrase:trazanad42
+
