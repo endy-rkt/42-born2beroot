@@ -6,3 +6,30 @@ passwd:trazanad007#
 
 encryption passphrase:trazanad42
 
+
+++ add trazanad to sudo and trazanad42 ++
+
+* apt install sudo
+
+* sudo groupadd trazanad42
+
+* sudo adduser trazanad trazanad42
+
+* sudo adduser sudo trazanad42
+
+++ firewalling with ufw ++
+
+* sudo apt install ufw
+
+* sudo ufw default deny
+
+* sudo ufw allow 4242
+
+* sudo ufw enable
+
+* sudo apt install openssh-server
+
+* systemctl restart ssh
+
+* change in etc/ssh/sshd_config: port to 4242, PermitRootLogin to no
+

@@ -21,17 +21,17 @@ Prérequis
 
  2. Manipulation des utilisateurs
 
-    + Créer un utilisateur avec votre login.
-    + Ajouter l'utilisateur au groupe user42 et sudo.
+    + Créer un utilisateur avec votre login.    ok
+    + Ajouter l'utilisateur au groupe user42 et sudo.   ok
     + Définir une politique de mot de passe fort pour tous les utilisateurs. 
 
 3. Pare-feu (UFW)
 
-    + Installer et configurer UFW.
-    + Ouvrir le port 4242 pour SSH.
-    + Refuser toutes les autres connexions entrantes.
-    + Interdir la connexion par SSH avec root
-    + Se lance lors du demarrage
+    + Installer et configurer UFW.      ok
+    + Ouvrir le port 4242 pour SSH.     ok
+    + Refuser toutes les autres connexions entrantes.       ok
+    + Interdir la connexion par SSH avec root.      ok
+    + Se lance lors du demarrage        ok
 
 4. Règles sudo
 

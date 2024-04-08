@@ -1,0 +1,33 @@
++++user and groups+++
+
+* create a group
+    $ sudo groupadd <groupname>
+    
+* add user to a group
+    $ sudo groupmod -a -U <username> <group-name>
+    or
+    $ sudo adduser user_name new_group
+    or
+    $ sudo useradd –G new_group user_name
+    or 
+    $ sudo usermod –a –G group_name user_name
+
+* create a user
+    $ sudo useradd <username>
+
+* check user group
+    $ sudo groups [<username>]
+    or
+    $ id -G -n <username>
+        -G: The -G flag tells to retrieve all the group IDs of the user and
+        -n: The -n flag tells to output the names of groups (otherwise it would output group IDs).
+    or
+    $ getent group|grep -w <username> 
+
+* remove a user from a group
+    $ sudo gpasswd –d user_name new_group
+
+* delete a group
+    $ sudo groupdel new_group
+
+
