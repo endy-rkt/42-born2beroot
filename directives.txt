@@ -1,0 +1,94 @@
+*partition and installaton
+
+*ssh port 4242
+
+*Pour des questions de sécurité,
+on ne devra pas pouvoir se connecter par SSH avec l’utilisateur root.
+
+*configurer votre système d’exploitation avec le pare-feu UFW (ou pare-feu
+pour Rocky) et ainsi ne laisser ouvert que le port 4242.
+
+*Votre pare-feu devra être actif au lancement de votre machine
+virtuelle.
+
+*Votre machine aura pour hostname votre login suivi de 42 (exemple : wil42). Vous
+serez amené(e) à modifier ce hostname durant votre évaluation.
+
+*Vous allez mettre en place une politique de mot de passe fort.:
+	+Votre mot de passe devra expirer tous les 30 jours
+	+ Le nombre minimum de jours avant de pouvoir modifier un mot de passe sera
+configuré à 2.
+	+L’utilisateur devra recevoir un avertissement 7 jours avant que son mot de passe
+n’expire
+	+Votre mot de passe sera de 10 caractères minimums dont une majuscule, une
+minuscule et un chiffre, et ne devra pas comporter plus de 3 caractères identique consécutifs
+	+Le mot de passe ne devra pas comporter le nom de l’utilisateur
+	+La règle suivante ne s’applique pas à l’utilisateur root : le mot de passe devra
+comporter au moins 7 caractères qui ne sont pas présents dans l’ancien mot de
+passe
+	+Bien entendu votre mot de passe root devra suivre cette politique.
+	+Après avoir mis en place vos fichiers de configuration, il faudra
+changer tous les mots de passe des comptes présents sur la machine
+virtuelle, compte root inclus.
+
+
+*Vous allez installer et configurer sudo selon une pratique stricte.:
+	+L’authentification en utilisant sudo sera limitée à 3 essais en cas de mot de passe
+erroné
+	+Un message de votre choix s’affichera en cas d’erreur suite à un mauvais mot de
+passe lors de l’utilisation de sudo.
+	+Chaque action utilisant sudo sera archivée, aussi bien les inputs que les outputs.
+Le journal se trouvera dans le dossier /var/log/sudo/.
+	+Le mode TTY sera activé pour des questions de sécurité.
+	+Les paths utilisables par sudo seront restreints, là encore pour des questions de
+sécurité. Exemple :
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+
+*Un utilisateur sera présent avec pour nom votre login en plus de l’utilisateur root.
+
+*Cet utilisateur appartiendra aux groupes user42 et sudo.
+
+*Durant la soutenance, vous allez devoir créer un nouvel utilisateur
+et lui assigner un groupe.
+
+
+* mettre en place un petit script nommé monitoring.sh. Ce dernier
+sera à développer en bash.
+	+Dès le lancement de votre serveur, le script écrira des informations toutes les 10 minutes sur tous les terminaux 
+	+La bannière est facultative.
+À aucun moment la moindre erreur ne doit être visible.
+	+L’architecture de votre système d’exploitation ainsi que sa version de kernel.
+	• Le nombre de processeurs physiques.
+	• Le nombre de processeurs virtuels.
+	• La mémoire vive disponible actuelle sur votre serveur ainsi que son taux d’utilisation sous forme de pourcentage.
+	• La mémoire disponible actuelle sur votre serveur ainsi que son taux d’utilisation
+sous forme de pourcentage.
+	• Le taux d’utilisation actuel de vos processeurs sous forme de pourcentage.
+	• La date et l’heure du dernier redémarrage.
+	• Si LVM est actif ou pas.
+	• Le nombre de connexions actives.
+	• Le nombre d’utilisateurs utilisant le serveur.
+	• L’adresse IPv4 de votre serveur, ainsi que son adresse MAC (Media Access Control).
+	• Le nombre de commande executées avec le programme sudo.
+
+*Mettre en place un site web WordPress fonctionnel avec, comme services, lighttpd,
+MariaDB et PHP.
+
+*Mettre en place un service qui vous semble utile (NGINX/Apache2 exclus !). Durant la soutenance, vous aurez à justifier ce choix.
+
+
+- partition: installation and partition creation
+
+- user manip
+
+- firellawing:ufw
+
+-sudo rules
+
+- password rules
+
+-monitoring with bash
+
+- web server
+
+-other important rules
