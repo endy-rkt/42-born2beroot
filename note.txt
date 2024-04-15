@@ -1,5 +1,5 @@
 trazanad42
-mdp intra
+trazanad42
 
 new user:trazanad
 passwd:trazanad007#

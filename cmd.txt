@@ -30,4 +30,56 @@
 * delete a group
     $ sudo groupdel new_group
 
+* apply sudo politics
+    # trazanad config
+
+    # number of failed auth
+    Defaults        passwd_tries=3
+
+    # custom error message
+    Defaults        badpass_message="Wrong password, please retry again."
+
+    # sudo log file
+    Defaults        log_host, log_year, logfile="/var/log/sudo/sudo.log"
+
+    # require tty
+    Defaults        requiretty
+
+    # restrict path
+    Defaults        secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
+
+* strength password
+    + Expiration : 30 j + Nombre minimum de jours avant de pouvoir modifier password: 2 j + Jour d'avertissement avant aue son mot de passe s'expire: 7 j
+        $ sudo chage -M 30 root
+        $ sudo chage -m 2 root
+        $ sudo chage -W 7 root
+        $ sudo chage -M 30 trazanad
+        $ sudo chage -m 2 trazanad
+        $ sudo chage -W 7 trazanad
+
+    + these rules for next user created in /etc/login.defs
+        PASS_MAX_DAYS   30   
+        PASS_MIN_DAYS   2
+        PASS_WARN_AGE   7
+
+    + password quality
+        # apt install libpam-pwquality
+
+        + apply rules in  etc/pam.d/common-passwd
+            # here are the per-package modules (the "Primary" block)
+                password        requisite                       pam_pwquality.so retry=3 minlen=10 dcredit=-1 lcredit=-1 ucredit=-1 maxrepeat=3 usercheck=1 enforce_for_root difok=7
+
+* monitoring ssh
+
+* bonus
+    * wordpress
+        # apt install wget
+
+        # sudo apt install lighttpd
+            configure ufw to allow http
+            configure network nat  80 to 8080
+    
+
+    
+    
 

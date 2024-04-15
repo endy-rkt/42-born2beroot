@@ -36,24 +36,24 @@ Prérequis
 4. Règles sudo
 
     + Configurer sudo avec les règles suivantes :
-    + Limite d'authentification : 3 essais
-    + Message d'erreur personnalisé a en cas d’erreur suite à un mauvais mot de passe
-    + Journalisation des actions (inputs/outputs) dans `/var/log/sudo/`
-    + Mode TTY activé
-    + Chemins restreints `/usr/local/sbin: /usr/local/bin: /usr/sbin: /usr/bin: /sbin: /bin: /snap/bin`
+    + Limite d'authentification : 3 essais      ok
+    + Message d'erreur personnalisé a en cas d’erreur suite à un mauvais mot de passe       ok
+    + Journalisation des actions (inputs/outputs) dans `/var/log/sudo/`     ok
+    + Mode TTY activé       ok
+    + Chemins restreints `/usr/local/sbin: /usr/local/bin: /usr/sbin: /usr/bin: /sbin: /bin: /snap/bin`     ok
 
 5. Règles de mot de passe
 
     + Définir une politique de mot de passe fort pour tous les utilisateurs :
-    + Expiration : 30 jours
-    + Nombre minimum de jours avant de pouvoir modifier password: 2 jours
-    + Jour d'avertissement avant aue son mot de passe s'expire: 7 jours
-    + Longueur minimale : 10 caractères
-    + Complexité : majuscule, minuscule, chiffre
-    + Pas plus de 3 caractères identiques consécutifs
-    + Pas de nom d'utilisateur dans le mot de passe
-    + Le mot de passe root doit suivre ces règles
-    + Pour non root,  le mot de passe devra comporter au moins 7 caractères qui ne sont pas présents dans l’ancien mot de passe.
+    + Expiration : 30 jours     ok
+    + Nombre minimum de jours avant de pouvoir modifier password: 2 jours       ok
+    + Jour d'avertissement avant aue son mot de passe s'expire: 7 jours         ok
+    + Longueur minimale : 10 caractères     ok
+    + Complexité : majuscule, minuscule, chiffre        ok
+    + Pas plus de 3 caractères identiques consécutifs       ok
+    + Pas de nom d'utilisateur dans le mot de passe         ok
+    + Le mot de passe root doit suivre ces règles           ok
+    + Pour non root,  le mot de passe devra comporter au moins 7 caractères qui ne sont pas présents dans l’ancien mot de passe.        ok
     <img src ="./images/monitoring.png"/>
 
 6. Surveillance avec Bash
