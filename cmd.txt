@@ -78,7 +78,26 @@
         # sudo apt install lighttpd
             configure ufw to allow http
             configure network nat  80 to 8080
-    
+        
+        # apt install mariadb-server
+            # mysql_secure_installation
+            >CREATE USER 'trazanad'@'localhost' IDENTIFIED BY 'trazanad42' ;
+            MariaDB [(none)]> GRANT ALL PRIVILEGES ON wordpress_db.* TO 'trazanad42'@'localhost';
+            MariaDB [(none)]> FLUSH PRIVILEGES;
+        
+        # apt install php php-cgi php-mysql
+
+        # lighttpd-enable-mod fastcgi
+        
+        # lighttpd-enable-mod fastcgi-php
+
+        # service lighttpd force-reload
+
+        now check in page web browser
+
+        password for wordpress:ni&j^^&33*NnhNEBIt
+
+
 
     
     

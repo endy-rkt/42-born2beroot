@@ -77,7 +77,7 @@ Prérequis
 
 8. Autres règles importantes
 
-    + Activer AppArmor (Debian) ou SELinux (Rocky).
+    + Activer <b>AppArmor</b> (Debian) ou SELinux (Rocky).
     + Mettre à jour le système régulièrement.
     + Sécuriser les services installés.
 
