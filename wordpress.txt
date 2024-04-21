@@ -1,0 +1,35 @@
+apt install php8.2 php8.2-fpm php8.2-cli php8.2-mysql
+
+configure php and lighttpd
+    $ sudo nano /etc/php/8.2/fpm/pool.d/www.conf
+       ;listen = /run/php/php8.2-fpm.sock
+        listen=127.0.0.1:9000
+
+    $ sudo nano /etc/lighttpd/conf-available/15-fastcgi-php.conf and delete the first two to add these two
+        "host" => "127.0.0.1",
+        "port" => "9000",
+
+    enable module to responsible for php to lighttpd communication
+        $ sudo lighty-enable-mod fastcgi
+        $ sudo lighty-enable-mod fastcgi-php
+
+    launch and test
+        $ sudo systemctl restart lighttpd php7.4-fpm
+        $ sudo chown -R www-data:www-data /var/www/html/ 
+        $ sudo chmod -R 755 /var/www/html/
+        $ sudo nano /var/www/html/test.php
+
+configure mariadb
+        sudo mysql_secure_installation
+        sudo mysql -u root -p
+        CREATE USER 'trazanad'@'localhost' IDENTIFIED BY 'trazanad0';
+        CREATE DATABASE wordpress_db;
+        GRANT ALL PRIVILEGES ON wordpress_db.* TO 'trazanad'@'localhost';
+        FLUSH PRIVILEGES;
+        exit;
+
+wordpress
+        download and extract wordpress
+        run address:port/wordpress
+        if problem check for authorization (owner, permission like above)
+        psswd:c&>a=x6ETq2Z]i?
