@@ -1,0 +1,39 @@
+Your script should always be able to display the following information:
+
+*   The architecture of your operating system and its kernel version.
+*   The number of physical processors.
+*   The number of virtual processors.
+*   The current available RAM on your server and its usage rate as a percentage.
+*   The current available disk space on your server and its usage rate as a percentage.
+*   The current CPU usage rate as a percentage.
+*   The date and time of the last reboot.
+*   Whether or not LVM is active.
+*   The number of active connections.
+*   The number of users using the server.
+*   The IPv4 address of your server, as well as its MAC (Media Access Control) address.
+*   The number of commands executed with the sudo program.
+
+The architecture of your operating system and its kernel version.
+    $ uname -a
+
+The number of physical processors && The number of virtual processors.
+    lscpu - display information about the CPU architecture
+
+The current available RAM on your server and its usage rate as a percentage.
+    free --mega to show in mega
+    free --mega | grep -i Mem| awk '{printf("%d/%dMB (%.2f%%)",$3,$2,$2/$3)}'
+
+The current available disk space on your server and its usage rate as a percentage.
+    take the disk space used without M:
+        df -h | grep overlay | awk '{print $3}'| cut -d "M" -f 1
+    take the disk size
+        df -h | grep overlay | awk '{print $2}'
+    take the percentage
+        df -h| grep overlay | awk '{printf("(%s)",$5)}'
+
+The current CPU usage rate as a percentage.
+    there many of them: top, htop, mpstat
+
+The date and time of the last reboot.
+    uptime -s
+

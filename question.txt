@@ -1,0 +1,12 @@
+virtualisation
+ssh
+sudo et pourquoi
+firewall et ufw
+pourquoi debian
+difference entre apt et aptitude
+difference entre debian et rocky
+avantage et incovenients mot de passe
+LVM
+script
+change hostname
+create group and user  adduser to group

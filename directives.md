@@ -56,30 +56,34 @@ Prérequis
     + Pour non root,  le mot de passe devra comporter au moins 7 caractères qui ne sont pas présents dans l’ancien mot de passe.        ok
     <img src ="./images/monitoring.png"/>
 
-6. Surveillance avec Bash
+6. Surveillance avec Bash       ok
 
-    + Créer un script monitoring.sh qui affiche toutes les 10 minutes :
-    + Architecture et version du kernel
-    + Nombre de processeurs (physiques et virtuels)
-    + Mémoire vive et disque (utilisation et disponible)
-    + Utilisation CPU actuel en %
-    + Date et heure du dernier redémarrage
-    + Utilisation de LVM (actif ou pas)
-    + Nombre de connexions et d'utilisateurs
-    + Adresse IPv4 et MAC
-    + Nombre de commandes sudo 
+    + Créer un script monitoring.sh qui affiche toutes les 10 minutes :     ok
+    + Architecture et version du kernel     ok
+    + Nombre de processeurs (physiques et virtuels)     ok
+    + Mémoire vive et disque (utilisation et disponible)        ok
+    + Utilisation CPU actuel en %       ok
+    + Date et heure du dernier redémarrage      ok
+    + Utilisation de LVM (actif ou pas)     ok
+    + Nombre de connexions et d'utilisateurs        ok
+    + Adresse IPv4 et MAC       ok
+    + Nombre de commandes sudo      ok
 
-7. Serveur Web
+7. Serveur Web ok
 
-    + Installation et configuration d'un serveur web: Lighttpd, MariaDB, PHP
-    + Mettre en place un site web WordPress fonctionnel avec ces services
-    + Choisir un service et justifier son choix (NGINX/Apache2 exclus !). 
+    + Installation et configuration d'un serveur web: Lighttpd, MariaDB, PHP ok
+    + Mettre en place un site web WordPress fonctionnel avec ces services   ok
+    + Choisir un service et justifier son choix (NGINX/Apache2 exclus !). ok
 
-8. Autres règles importantes
 
-    + Activer <b>AppArmor</b> (Debian) ou SELinux (Rocky).
-    + Mettre à jour le système régulièrement.
-    + Sécuriser les services installés.
+
+8. fail2ban
+
+    + installation ok
+    + config
+
+
+9. Autres règles importantes
 
 Voici deux exemples avec des commandes simples pour vérifier une partie des demandes du sujet :
     <img src ="./images/others.png"/>

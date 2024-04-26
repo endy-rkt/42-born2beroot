@@ -69,7 +69,9 @@
             # here are the per-package modules (the "Primary" block)
                 password        requisite                       pam_pwquality.so retry=3 minlen=10 dcredit=-1 lcredit=-1 ucredit=-1 maxrepeat=3 usercheck=1 enforce_for_root difok=7
 
-* monitoring ssh
+* monitoring ssh 
+    place monitoring script in usr/local/bin
+    define cron job
 
 * bonus
     * wordpress
