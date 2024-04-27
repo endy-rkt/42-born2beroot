@@ -4,7 +4,7 @@
 arch=$(uname -a)
 
 # CPU PHYSICAL
-cpup=$(cat /proc/cpuinfo | grep "physical id"|wc -l)
+cpup=$(cat /proc/cpuinfo | grep "physical id"|uniq|wc -l)
 
 # CPU VIRTUAL
 cpuv=$(cat /proc/cpuinfo | grep "processor"|wc -l)

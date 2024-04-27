@@ -80,7 +80,7 @@ Prérequis
 8. fail2ban
 
     + installation ok
-    + config
+    + config ok
 
 
 9. Autres règles importantes

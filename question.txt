@@ -10,3 +10,5 @@ LVM
 script
 change hostname
 create group and user  adduser to group
+cron
+script
