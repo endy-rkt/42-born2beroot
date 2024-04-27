@@ -1,0 +1,6 @@
+unanme -a for print system information all
+
+df -m report file system disk space usage en mega
+
+vmstat Report virtual memory statistics 
+vmstat 1 2 for 1s and 2echantillons   (expr 100 - $cpul)
